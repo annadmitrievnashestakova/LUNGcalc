@@ -4,6 +4,11 @@
   --box-color: #ffffff;
   --border-color: #ebebeb;
   --shade-color: #dddddd;
+
+  --error-txt-color: #c22631;
+  --error-box-color: #f4e4e5;
+  --error-border-color: #f4dbdd;
+
 }
 body {
   color: var(--txt-color);
@@ -33,6 +38,12 @@ body {
 
   padding: 15px;
   outline: 1px solid var(--border-color);
+}
+.error {
+  background-color: var(--error-box-color);
+  color: var(--error-txt-color);
+  border-color: var(--error-border-color);
+
 }
 /* prevents the outline from overlapping with rounded corners */
 .form > :first-child, .form > :last-child {

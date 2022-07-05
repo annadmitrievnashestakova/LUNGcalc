@@ -38,7 +38,7 @@
 				<div class="form-item">
 					<div>Количество пораженных лимфоузлов</div>
 					<div>
-						<input type="number" id="in5" onchange="calc()" onkeyup="calc()" min=0></input>
+						<input type="number" id="in5" onchange="calc()" onkeyup="calc()" min=1></input>
 					</div>
 				</div>
 				<div class="form-item">
@@ -48,17 +48,22 @@
 					</div>
 				</div>
 			</div>
-			<div class="form">
+			<div class="form error">
 				<div class="form-item">
 					<div id="percentage-error"></div>
 				</div>
+			</div>
+			<div class="form">
 				<div class="form-item">
+					<div>Оставшихся клеток по лимфоузлам</div>
 					<div id="var-cells"></div>
 				</div>
 				<div class="form-item">
+					<div>Ответ опухоли на терапию</div>
 					<div id="var-react"></div>
 				</div>
 				<div class="form-item">
+					<div>Группа прогноза</div>
 					<div id="prognosis"></div>
 				</div>
 			</div>
