@@ -37,6 +37,7 @@ body {
   align-items: center;
 
   padding: 15px;
+  min-height: 28px;
   outline: 1px solid var(--border-color);
 }
 .error {
