@@ -71,6 +71,7 @@ input[type="checkbox"] {
 }
 h1 {
   text-align: center;
+  font-size: 150%;
 }
 
 /* Hide up/down arrows in textfield */
