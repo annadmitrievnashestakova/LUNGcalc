@@ -45,7 +45,7 @@ function prognosis(adenocarcinoma, reaction) {
 	} else {
 		if (adenocarcinoma) {
 			if (reaction <= 0.65) {
-				return "mCR"
+				return "MPR"
 			} else {
 				return "недостаточный ответ"
 			}
