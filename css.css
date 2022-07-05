@@ -1,10 +1,9 @@
 :root {
   --bg-color: #fafafa;
-  --txt-color: #000000;
+  --txt-color: #323232;
   --box-color: #ffffff;
   --border-color: #ebebeb;
   --shade-color: #dddddd;
-  --error-color:
 }
 body {
   color: var(--txt-color);
@@ -16,6 +15,7 @@ body {
   max-width: 800px;
 }
 .form {
+  margin: 15px;
   display: grid;
   gap: 1px;
   border-radius: 15px;
@@ -23,9 +23,6 @@ body {
   border: 1px solid var(--border-color);
   border-collapse: collapse;
   box-shadow: 0px 5px 10px 0px var(--shade-color);
-}
-.error {
-  background-color: var(--error-color);
 }
 .form-item {
   display: flex;
@@ -49,11 +46,12 @@ input[type="number"] {
   background-color: var(--border-color);
   border: 1px solid var(--border-color);
   width: 120px;
+  font-family: Ubuntu;
 }
 input[type="checkbox"] {
-  height: 25px;
-  width: 25px;
+  height: 22px;
+  width: 22px;
 }
-span {
-  display: inline;
+h1 {
+  text-align: center;
 }

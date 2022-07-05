@@ -16,21 +16,21 @@ function calc() {
 
 	console.log(in2, in3, in4, in2 + in3 + in4)
 	if (in2 + in3 + in4 != 100) {
-		document.getElementById("percentage-error").innerText = "Проценты жизнеспособной опухоли, некроза и стромы должны складываться до 100%. Сейчас они складываются до " + (in2 + in3 + in4);
+		document.getElementById("percentage-error").innerHTML = "Проценты жизнеспособной опухоли, некроза и стромы должны складываться до 100%.</br>Сейчас они складываются до " + (in2 + in3 + in4) + "%.";
 		return
 	}
 	remaining_cells = in6/in5
 	reaction = (in2 + remaining_cells) / 2
-	document.getElementById("var-cells").innerText = "Оставшихся клеток по лимфоузлам: " + remaining_cells*100
-	document.getElementById("var-react").innerText = "Ответ опухоли на терапию: " + reaction
-	document.getElementById("prognosis").innerText = "Группа прогноза: " + prognosis(in1, reaction)
+	document.getElementById("var-cells").innerHTML = "Оставшихся клеток по лимфоузлам: " + remaining_cells*100
+	document.getElementById("var-react").innerHTML = "Ответ опухоли на терапию: " + reaction
+	document.getElementById("prognosis").innerHTML = "Группа прогноза: " + prognosis(in1, reaction)
 }
 
 function clearOutput() {
-		document.getElementById("percentage-error").innerText = "";
-		document.getElementById("var-cells").innerText = "";
-		document.getElementById("var-react").innerText = "";
-		document.getElementById("prognosis").innerText = "";
+		document.getElementById("percentage-error").innerHTML = "";
+		document.getElementById("var-cells").innerHTML = "";
+		document.getElementById("var-react").innerHTML = "";
+		document.getElementById("prognosis").innerHTML = "";
 }
 
 function prognosis(adenocarcinoma, reaction) {
