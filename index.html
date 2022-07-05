@@ -14,7 +14,7 @@
 			<div class="form">
 				<div class="form-item">
 					<span>Аденокарцинома (отметить, если да)</span>
-					<input type="checkbox" id="in1" onkeyup="calc()"></input>
+					<input type="checkbox" id="in1" onchange="calc()"></input>
 				</div>
 				<div class="form-item">
 					<span>Процент жизнеспособной опухоли</span>
@@ -39,6 +39,9 @@
 			</div>
 			<div class="output">
 				<div id="percentage-error"></div>
+				<div id="var-cells"></div>
+				<div id="var-react"></div>
+				<div id="prognosis"></div>
 			</div>
 		</div>
 	</body>
