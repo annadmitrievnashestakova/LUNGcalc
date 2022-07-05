@@ -2,8 +2,9 @@
   --bg-color: #fafafa;
   --txt-color: #000000;
   --box-color: #ffffff;
-  --border-color: #e3e3e3;
+  --border-color: #ebebeb;
   --shade-color: #dddddd;
+  --error-color:
 }
 body {
   color: var(--txt-color);
@@ -23,11 +24,15 @@ body {
   border-collapse: collapse;
   box-shadow: 0px 5px 10px 0px var(--shade-color);
 }
+.error {
+  background-color: var(--error-color);
+}
 .form-item {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
 
   padding: 15px;
   outline: 1px solid var(--border-color);
@@ -37,8 +42,18 @@ body {
   outline: none;
 }
 input {
+  padding: 5px;
 }
 input[type="number"] {
+  border-radius: 7.5px;
+  background-color: var(--border-color);
+  border: 1px solid var(--border-color);
+  width: 120px;
 }
 input[type="checkbox"] {
+  height: 25px;
+  width: 25px;
+}
+span {
+  display: inline;
 }
