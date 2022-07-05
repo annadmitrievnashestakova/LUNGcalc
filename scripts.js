@@ -19,9 +19,9 @@ function calc() {
 		document.getElementById("percentage-error").innerHTML = "Проценты жизнеспособной опухоли, некроза и стромы должны складываться до 100%.</br>Сейчас они складываются до " + (in2 + in3 + in4) + "%.";
 		return
 	}
-	remaining_cells = in6/in5
-	reaction = (in2 + remaining_cells) / 2
-	document.getElementById("var-cells").innerHTML = "Оставшихся клеток по лимфоузлам: " + remaining_cells*100
+	remaining_cells = (in6/100)/in5
+	reaction = ((in2/100) + remaining_cells) / 2
+	document.getElementById("var-cells").innerHTML = "Оставшихся клеток по лимфоузлам: " + remaining_cells
 	document.getElementById("var-react").innerHTML = "Ответ опухоли на терапию: " + reaction
 	document.getElementById("prognosis").innerHTML = "Группа прогноза: " + prognosis(in1, reaction)
 }
