@@ -7,7 +7,7 @@
 }
 body {
   color: var(--txt-color);
-  font-family: 'Cantarell';
+  font-family: Ubuntu;
   background-color: var(--bg-color);
 }
 .body {
