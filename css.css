@@ -1,0 +1,42 @@
+:root {
+  --bg-color: #fafafa;
+  --txt-color: #000000;
+  --box-color: #ffffff;
+  --border-color: #e3e3e3;
+  --shade-color: #dddddd;
+}
+body {
+  color: var(--txt-color);
+  background-color: var(--bg-color);
+}
+.body {
+  margin: auto;
+  max-width: 800px;
+}
+.form {
+  display: grid;
+  gap: 1px;
+  border-radius: 15px;
+  background-color: var(--box-color);
+  border: 1px solid var(--border-color);
+  border-collapse: collapse;
+  box-shadow: 0px 5px 10px 0px var(--shade-color);
+}
+.form-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  padding: 15px;
+  outline: 1px solid var(--border-color);
+}
+.form > :first-child, .form > :last-child {
+  outline: none;
+}
+input {
+}
+input[type="number"] {
+}
+input[type="checkbox"] {
+}
