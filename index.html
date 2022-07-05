@@ -14,28 +14,31 @@
 			<div class="form">
 				<div class="form-item">
 					<span>Аденокарцинома (отметить, если да)</span>
-					<input type="checkbox"></input>
+					<input type="checkbox" id="in1" onkeyup="calc()"></input>
 				</div>
 				<div class="form-item">
 					<span>Процент жизнеспособной опухоли</span>
-					<input type="number"></input>
+					<input type="number" id="in2" onkeyup="calc()"></input>
 				</div>
 				<div class="form-item">
 					<span>Процент некроза</span>
-					<input type="number"></input>
+					<input type="number" id="in3" onkeyup="calc()"></input>
 				</div>
 				<div class="form-item">
 					<span>Процент стромы (фиброз и воспалительный инфильтрат)</span>
-					<input type="number"></input>
+					<input type="number" id="in4" onkeyup="calc()"></input>
 				</div>
 				<div class="form-item">
 					<span>Количество пораженных лимфоузлов</span>
-					<input type="number"></input>
+					<input type="number" id="in5" onkeyup="calc()"></input>
 				</div>
 				<div class="form-item">
 					<span>Процент жизнеспособной опухоли в метастазах</span>
-					<input type="number"></input>
+					<input type="number" id="in6" onkeyup="calc()"></input>
 				</div>
+			</div>
+			<div class="output">
+				<div id="percentage-error"></div>
 			</div>
 		</div>
 	</body>
