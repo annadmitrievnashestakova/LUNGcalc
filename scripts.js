@@ -21,7 +21,7 @@ function calc() {
 	}
 	remaining_cells = (in6/100)/in5
 	reaction = ((in2/100) + remaining_cells) / 2
-	document.getElementById("var-react").innerHTML = reaction
+	document.getElementById("var-react").innerHTML = reaction.toFixed(3)
 	document.getElementById("prognosis").innerHTML = prognosis(in1, reaction)
 }
 
