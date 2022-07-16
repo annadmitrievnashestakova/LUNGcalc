@@ -21,14 +21,12 @@ function calc() {
 	}
 	remaining_cells = (in6/100)/in5
 	reaction = ((in2/100) + remaining_cells) / 2
-	document.getElementById("var-cells").innerHTML = remaining_cells
 	document.getElementById("var-react").innerHTML = reaction
 	document.getElementById("prognosis").innerHTML = prognosis(in1, reaction)
 }
 
 function clearOutput() {
 	document.getElementsByClassName("error")[0].style.display = "none";
-	document.getElementById("var-cells").innerHTML = "N/A";
 	document.getElementById("var-react").innerHTML = "N/A";
 	document.getElementById("prognosis").innerHTML = "N/A";
 }
