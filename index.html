@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Калькулятор</title>
@@ -10,6 +10,7 @@
 	<body onload="calc()">
 		<div class="body">
 			<h1>Калькулятор</h1>
+			<h2>Гистологический тип опухоли</h2>
 			<div class="form">
 				<label for="in1" class="form-item">
 					<div>Аденокарцинома (отметить, если да)</div>
@@ -17,6 +18,9 @@
 						<input type="checkbox" id="in1" onchange="calc()" onkeyup="calc()"></input>
 					</div>
 				</label>
+			</div>
+			<h2>"Ложе опухоли"</h2>
+			<div class="form">
 				<div class="form-item">
 					<div>Процент жизнеспособной опухоли</div>
 					<div class="percentage">
@@ -30,7 +34,7 @@
 					</div>
 				</div>
 				<div class="form-item">
-					<div>Процент стромы (фиброз и воспалительный инфильтрат)</div>
+					<div>Процент стромы</div>
 					<div class="percentage">
 						<input type="number" id="in4" onchange="calc()" onkeyup="calc()" min=0 max=100></input>
 					</div>
