@@ -35,7 +35,7 @@ function clearOutput() {
 
 function showPercentageError(percentage) {
 	document.getElementsByClassName("error")[0].style.display = "inherit";
-	document.getElementById("percentage-error").innerHTML = "Проценты жизнеспособной опухоли, некроза и стромы должны складываться до 100%.</br>Сейчас они складываются до " + percentage + "%.";
+	document.getElementById("percentage-error").innerHTML = "Компоненты «ложа опухоли» должны в сумме составлять 100%.</br>Сейчас они составляют " + percentage + "%.";
 
 }
 
