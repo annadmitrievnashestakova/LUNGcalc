@@ -4,6 +4,7 @@
   --box-color: #ffffff;
   --border-color: #ebebeb;
   --shade-color: #dddddd;
+  --small-txt-color: #aaaaaa;
 
   --error-txt-color: #c22631;
   --error-box-color: #f4e4e5;
@@ -63,7 +64,10 @@ input[type="number"] {
 .percentage::before {
   content: "%";
   position: relative;
-  left: 110px;
+  display: block;
+  left: 92px;
+  top: 4px;
+  height: 0;
 }
 
 input[type="checkbox"] {
@@ -74,7 +78,17 @@ h1 {
   text-align: center;
   font-size: 150%;
 }
-
+h2 {
+  font-size: 120%;
+  margin: 5px;
+}
+.subtitle {
+	font-size: 90%;
+}
+.description {
+	color: var(--small-txt-color);
+	font-size: 80%;
+}
 /* Hide up/down arrows in textfield */
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
