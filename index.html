@@ -13,40 +13,59 @@
 			<h2>Гистологический тип опухоли</h2>
 			<div class="form">
 				<label for="in1" class="form-item">
-					<div>Аденокарцинома (отметить, если да)</div>
+					<div>
+						<div>Аденокарцинома</div>
+						<div class="description">Оптимальный пороговый процент жизнеспособной опухоли для прогнозирования выживаемости отличается для аденокарциномы</div>
+					</div>
 					<div>
 						<input type="checkbox" id="in1" onchange="calc()" onkeyup="calc()"></input>
 					</div>
 				</label>
 			</div>
 			<h2>"Ложе опухоли"</h2>
+			<div class="subtitle">с шагом в 10%; если ниже 5%, то с точностью до 1%</div>
 			<div class="form">
 				<div class="form-item">
-					<div>Процент жизнеспособной опухоли</div>
+					<div>
+						<div>Процент жизнеспособной опухоли</div>
+						<div class="description">Для коллоидной карциномы муцин должен быть включён в процент жизнеспособной опухоли</div>
+					</div>
 					<div class="percentage">
 						<input type="number" id="in2" onchange="calc()" onkeyup="calc()" min=0 max=100></input>
 					</div>
 				</div>
 				<div class="form-item">
-					<div>Процент некроза</div>
+					<div>
+						<div>Процент некроза</div>
+					</div>
 					<div class="percentage">
 						<input type="number" id="in3" onchange="calc()" onkeyup="calc()" min=0 max=100></input>
 					</div>
 				</div>
 				<div class="form-item">
-					<div>Процент стромы</div>
+					<div>
+						<div>Процент стромы</div>
+						<div class="description">Включает в себя фиброз и воспалительный инфильтрат</div>
+					</div>
 					<div class="percentage">
 						<input type="number" id="in4" onchange="calc()" onkeyup="calc()" min=0 max=100></input>
 					</div>
 				</div>
+			</div>
+			<h2>Лимфоузлы</h2>
+			<div class="form">
 				<div class="form-item">
-					<div>Количество пораженных лимфоузлов</div>
+					<div>
+						<div>Количество пораженных лимфоузлов</div>
+					</div>
 					<div>
 						<input type="number" id="in5" onchange="calc()" onkeyup="calc()" min=1></input>
 					</div>
 				</div>
 				<div class="form-item">
-					<div>Процент жизнеспособной опухоли в метастазах</div>
+					<div>
+						<div>Процент жизнеспособной опухоли в метастазах</div>
+					</div>
 					<div class="percentage">
 						<input type="number" id="in6" onchange="calc()" onkeyup="calc()" min=0 max=100></input>
 					</div>
@@ -59,11 +78,15 @@
 			</div>
 			<div class="form">
 				<div class="form-item">
-					<div>Суммарный индекс ответа опухоли на терапию</div>
+					<div>
+						<div>Суммарный индекс ответа опухоли на терапию</div>
+					</div>
 					<div id="var-react"></div>
 				</div>
 				<div class="form-item">
-					<div>Ответ опухоли на терапию</div>
+					<div>
+						<div>Ответ опухоли на терапию</div>	
+					</div>
 					<div id="prognosis"></div>
 				</div>
 			</div>
