@@ -19,7 +19,7 @@ function calc() {
 		showPercentageError(in2 + in3 + in4)
 		return
 	}
-	remaining_cells = (in6/100)/in5
+	remaining_cells = (in6/100)
 	reaction = ((in2/100) + remaining_cells) / 2
 	document.getElementById("var-react").innerHTML = parseFloat(reaction.toFixed(3))
 	document.getElementById("prognosis").innerHTML = prognosis(in1, reaction)
@@ -39,7 +39,7 @@ function showPercentageError(percentage) {
 
 function prognosis(adenocarcinoma, reaction) {
 	if (reaction == 0) {
-		return "pCR"
+		return "CPR"
 	} else {
 		if (adenocarcinoma) {
 			if (reaction <= 0.65) {
