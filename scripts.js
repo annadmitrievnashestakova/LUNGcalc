@@ -15,7 +15,6 @@ prognosis_descriptions = {
 
 function parseFloatWeakly(str) {
 	parsed = parseFloat(str)
-	console.log(parsed, parsed !== parsed)
 	return parsed === parsed ? parsed : 0
 }
 
@@ -43,8 +42,8 @@ function calc() {
 	if (prognosis != "недостаточный ответ") {
 		document.getElementById("prognosis-desc").innerHTML = descriptions[prognosis]
 		document.getElementById("prognosis-aden-desc").innerHTML = prognosis_descriptions[in1]
+		document.getElementById("graphs").style.display = "initial";
 	}
-	document.getElementById("graphs").style.display = "initial";
 
 }
 
