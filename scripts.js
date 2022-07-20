@@ -1,3 +1,18 @@
+full_names = {
+	"CPR": "Полный патологический ответ",
+	"MPR": "Значительный патологический ответ",
+	"недостаточный ответ": "Недостаточный ответ"
+}
+descriptions = {
+	"CPR": "(Отсутствие каких-либо жизнеспособных опухолевых клеток при просмотре гистологических препаратов с окраской H&E после полной оценки резецированного образца рака легкого, включая все отобранные регионарные лимфатические узлы.<br />Такие опухоли будут классифицированы как ypT0N0 в соответствии с системами стадирования 8-го издания AJCC и UICC.)",
+	"MPR": "(Уменьшение жизнеспособной опухоли до размера ниже установленного клинически значимого порога, основанного на предшествующих данных в соответствии с индивидуальным гистологическим типом рака легкого и специфической терапией.<br />Также может быть установлен, когда в \"ложе опухоли\" нет жизнеспособных опухолевых клеток, но в лимфатических узлах есть жизнеспособная метастатическая карцинома (ypT0, N1,2 или 3). Однако прогностические и терапевтические последствия этой клинической ситуации неизвестны.)",
+	"недостаточный ответ": ""
+}
+prognosis_descriptions = {
+	true: "По данным <a href='https://www.sciencedirect.com/science/article/pii/S1556086418334944'>исследования</a> пациенты с аденокарциномой и низким (≤65%) процентом жизнеспособной опухоли имели значительно лучшие показатели LC-CID (5-летняя кумулятивная заболеваемость раком легких) и OS (общая выживаемость), чем пациенты с высоким (>65%) процентом жизнеспособной опухоли (низкий или высокий процент жизнеспособной опухоли: 5-летняя LC-CID, 23% против 47%). [ p = 0,005]; 5-летняя ОВ, 64% против 42% [ p = 0,005]).",
+	false: "По данным <a href='https://www.sciencedirect.com/science/article/pii/S1556086418334944'>исследования</a> пациенты с плоскоклеточным раком с низким (≤10%) процентом жизнеспособной опухолью имели значительно лучшие показатели LC-CID (5-летняя кумулятивная заболеваемость раком легких) и OS (общая выживаемость), чем пациенты с высоким процентом жизнеспособной опухоли (низкий или высокий процент жизнеспособной опухоли: 5-летний LC-CID, 5% против 42% [ p = 0,002] ; 5-летняя ОВ, 69% против 42% [ p = 0,045])."
+}
+
 function parseFloatWeakly(str) {
 	parsed = parseFloat(str)
 	console.log(parsed, parsed !== parsed)
@@ -22,13 +37,24 @@ function calc() {
 	remaining_cells = (in6/100)
 	reaction = ((in2/100) + remaining_cells) / 2
 	document.getElementById("var-react").innerHTML = parseFloat(reaction.toFixed(3))
-	document.getElementById("prognosis").innerHTML = prognosis(in1, reaction)
+	prognosis = findPrognosis(in1, reaction)
+	document.getElementById("prognosis").innerHTML = prognosis
+	document.getElementById("prognosis-full").innerHTML = full_names[prognosis]
+	if (prognosis != "недостаточный ответ") {
+		document.getElementById("prognosis-desc").innerHTML = descriptions[prognosis]
+		document.getElementById("prognosis-aden-desc").innerHTML = prognosis_descriptions[in1]
+
+	}
+
 }
 
 function clearOutput() {
 	document.getElementsByClassName("error")[0].style.display = "none";
 	document.getElementById("var-react").innerHTML = "N/A";
 	document.getElementById("prognosis").innerHTML = "N/A";
+	document.getElementById("prognosis-full").innerHTML = "";
+	document.getElementById("prognosis-desc").innerHTML = "";
+	document.getElementById("prognosis-aden-desc").innerHTML = "";
 }
 
 function showPercentageError(percentage) {
@@ -37,7 +63,7 @@ function showPercentageError(percentage) {
 
 }
 
-function prognosis(adenocarcinoma, reaction) {
+function findPrognosis(adenocarcinoma, reaction) {
 	if (reaction == 0) {
 		return "CPR"
 	} else {
