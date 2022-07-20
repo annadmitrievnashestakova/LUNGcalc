@@ -54,6 +54,7 @@ function clearOutput() {
 	document.getElementById("prognosis").innerHTML = "N/A";
 	document.getElementById("prognosis-full").innerHTML = "";
 	document.getElementById("prognosis-desc").innerHTML = "";
+	document.getElementById("prognosis-aden-desc").innerHTML = "";
 	document.getElementById("graphs").style.display = "none";
 }
 
