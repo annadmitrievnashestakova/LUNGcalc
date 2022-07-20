@@ -43,8 +43,8 @@ function calc() {
 	if (prognosis != "недостаточный ответ") {
 		document.getElementById("prognosis-desc").innerHTML = descriptions[prognosis]
 		document.getElementById("prognosis-aden-desc").innerHTML = prognosis_descriptions[in1]
-
 	}
+	document.getElementById("graphs").style.display = "initial";
 
 }
 
@@ -54,7 +54,7 @@ function clearOutput() {
 	document.getElementById("prognosis").innerHTML = "N/A";
 	document.getElementById("prognosis-full").innerHTML = "";
 	document.getElementById("prognosis-desc").innerHTML = "";
-	document.getElementById("prognosis-aden-desc").innerHTML = "";
+	document.getElementById("graphs").style.display = "none";
 }
 
 function showPercentageError(percentage) {
